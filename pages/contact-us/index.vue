@@ -47,10 +47,17 @@
               </label>
             </div>
             <button
+                :disabled='loading'
                 type='submit'
-                class='text-white rounded-md hover:bg-[#021B32] transition-all bg-black w-full md:max-w-[200px] py-[15px] text-[16px]'
+                class='text-white disabled:bg-gray-700 rounded-md hover:bg-[#021B32] transition-all bg-black w-full md:max-w-[200px] py-[15px] text-[16px]'
             >
-              Send Message
+              <template v-if="loading">
+                <InputIcon class="pi pi-spin pi-spinner mr-1"/>
+                Sending...
+              </template>
+              <template v-else>
+                Send Message
+              </template>
             </button>
           </form>
         </div>
@@ -95,6 +102,7 @@ import {useApi} from "~/composables/interceptors";
 const toast = useToast();
 
 const saveUserData = ref<boolean>(false);
+const loading = ref<boolean>(false);
 const errors = ref<string[]>([]);
 
 const contactData = reactive({
@@ -117,7 +125,7 @@ onMounted(() => {
   }
 });
 
-const onSubmit = () => {
+const onSubmit = async () => {
   if (saveUserData.value) {
     saveContactInformation();
   } else {
@@ -135,8 +143,10 @@ const onSubmit = () => {
     });
   }
 
+
   try {
-    useApi('/emails/contact-us', {
+    loading.value = true;
+    await useApi('/emails/contact-us', {
       method: 'POST',
       contactData,
     });
@@ -144,6 +154,7 @@ const onSubmit = () => {
     console.log(e)
   } finally {
     errors.value = [];
+    loading.value = false;
   }
 };
 

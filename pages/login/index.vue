@@ -8,8 +8,8 @@
         <router-link to="/registration" class='text-[#0989FF] hover:underline'>Create a free account</router-link>
       </div>
       <a href='#'
-         class='cursor-pointer mt-[20px] sm:mt-[30px] px-[8px] flex gap-4 items-center border-solid w-fit border-[#DADCE0] hover:bg-gray-100 transition-all rounded py-[10px] justify-center border-2'>
-        <NuxtImg src='/' alt='Google icon'/>
+         class='cursor-pointer mt-[20px] sm:mt-[30px] px-[8px] flex gap-2 items-center border-solid w-fit border-[#DADCE0] hover:bg-gray-100 transition-all rounded py-[10px] justify-center border-2'>
+        <i class="pi-google pi"/>
         <span class='text-[#3C4043] sm:text-[16px] text-[14px]'>
           Sign up with google
         </span>
@@ -46,15 +46,18 @@
       </button>
     </div>
 
-    <NuxtImg src='/' alt='Login particle image' class='absolute hidden md:block bottom-[280px] left-0'/>
-    <NuxtImg src='/' alt='Login particle image' class='absolute hidden md:block top-[140px] right-0'/>
-    <NuxtImg src='/' alt='Login particle image' class='absolute top-[140px] left-[-200px]'/>
+    <NuxtImg src='/img/login/decor1.png'
+             class='absolute hidden md:block bottom-[280px] left-0'/>
+    <NuxtImg src='/img/login/decor2.png'
+             class='absolute hidden md:block top-[140px] right-0'/>
+    <NuxtImg src='/img/login/decor3.png'
+             class='absolute top-[140px] left-[-200px]'/>
   </div>
 </template>
 
 <script setup lang='ts'>
 import {validate} from "~/composables/validation";
-import {useApi} from "~/composables/interceptors";
+import {useAPI} from "~/composables/interceptors";
 
 useHead({
   title: 'Gldcart | Login',
@@ -91,19 +94,12 @@ const onSubmit = async () => {
   try {
     loading.value = true;
 
-    await useApi('/auth/login', {
+    await useAPI('/auth/login', {
       method: 'POST',
       body: authData
     })
-
-    navigateTo('/')
   } catch (e) {
-    return toast.add({
-      severity: 'error',
-      summary: 'Error Message',
-      detail: 'Invalid email or password!',
-      life: 3000
-    });
+    console.log(e)
   } finally {
     loading.value = false;
   }

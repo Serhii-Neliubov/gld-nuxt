@@ -2,13 +2,21 @@
   <div class='bg-[#ecf2f7]'>
     <div class='mx-auto max-w-[1240px] drop-shadow-2xl pb-[50px] px-[20px]'>
       <div class='flex flex-col justify-center items-center text-center'>
-        <h1 class='sm:text-[44px] mt-[25px] min-[470px]:text-[35px] text-[22px] text-center font-poppins font-light mb-[15px] sm:mb-[30px]'>
+        <h1 class='sm:text-[44px] mt-[25px] min-[470px]:text-[35px] text-[22px] text-center font-poppins font-light mb-[5px] sm:mb-[+ťpx]'>
           Keep In Touch with Us</h1>
-        <div
-            class='flex mb-[25px] sm:mb-[50px] items-center gap-[20px] after:absolute after:w-[8px] after:h-[8px] after:top-[50%] after:translate-y-[-50%] after:rounded-full relative after:left-[43%] after:translate-x-[-50%] after:bg-[#A8ACB0]'>
-          <Link to='/' class='text-[#55585B] hover:underline'>Home</Link>
-          <span class='text-[#55585B]'>Contact</span>
-        </div>
+        <Breadcrumb :model="items" style="background: none">
+          <template #item="{ item, props }">
+            <router-link v-if="item.route" v-slot="{ href, navigate }" :to="item.route" custom>
+              <a :href="href" v-bind="props.action" @click="navigate">
+                <span :class="[item.icon, 'text-color']"/>
+                <span class="hover:text-black transition-all">{{ item.label }}</span>
+              </a>
+            </router-link>
+            <a v-else :href="item.url" :target="item.target" v-bind="props.action">
+              <span class="text-surface-700 dark:text-surface-0">{{ item.label }}</span>
+            </a>
+          </template>
+        </Breadcrumb>
 
       </div>
       <div
@@ -63,29 +71,29 @@
         </div>
         <div class='flex flex-col gap-10 w-full md:max-w-[205px]'>
           <div class='text-center lg:text-left flex justify-center md:items-start items-center flex-col gap-2'>
-            <img class='w-[40px]' src='' alt="Icon"/>
+            <NuxtImg class='w-[40px]' src='' alt="Icon"/>
             <a href='mailto:contact@Gldcard.com'>contact@Gldcard.com</a>
             <a href='tel:4065550120'>406 555-0120</a>
           </div>
           <div class='text-center lg:text-left flex justify-center md:items-start items-center flex-col gap-2'>
-            <img class='w-[40px]' src='' alt="Icon"/>
+            <NuxtImg class='w-[40px]' src='' alt="Icon"/>
             <span class='text-left'>6391 Elgin St. Celina, Delaware 10299</span>
           </div>
           <div class='text-center lg:text-left flex justify-center md:items-start items-center flex-col gap-4'>
-            <img class='w-[40px]' src='' alt="Icon"/>
+            <NuxtImg class='w-[40px]' src='' alt="Icon"/>
             <span>Find on social media</span>
             <div class='flex md:gap-0 gap-2'>
               <a href="#"
                  class='w-[38px] h-[38px] flex justify-center items-center border-[1px] border-solid border-[#E6E7E8]'>
-                <img src='' alt='Social image'/>
+                <NuxtImg src='' alt='Social image'/>
               </a>
               <a href="#"
                  class='w-[38px] h-[38px] flex justify-center items-center border-[1px] border-solid border-[#E6E7E8]'>
-                <img src='' alt='Social image'/>
+                <NuxtImg src='' alt='Social image'/>
               </a>
               <a href="#"
                  class='w-[38px] h-[38px] flex justify-center items-center border-[1px] border-solid border-[#E6E7E8]'>
-                <img src='' alt='Social image'/>
+                <NuxtImg src='' alt='Social image'/>
               </a>
             </div>
           </div>
@@ -98,6 +106,11 @@
 <script setup lang='ts'>
 import {validate} from "~/composables/validation";
 import {useApi} from "~/composables/interceptors";
+
+const items = ref([
+  {label: 'Home', route: '/'},
+  {label: 'Contact us', route: '/contact-us'},
+]);
 
 const toast = useToast();
 
@@ -138,17 +151,17 @@ const onSubmit = async () => {
     return toast.add({
       severity: 'error',
       summary: 'Error Message',
-      detail: 'If you want to contact us you need to fill all fields!',
+      detail: 'If you want to contact us you need to fill all fields correctly!',
       life: 3000
     });
   }
 
-
   try {
     loading.value = true;
+
     await useApi('/emails/contact-us', {
       method: 'POST',
-      contactData,
+      body: contactData,
     });
   } catch (e) {
     console.log(e)

@@ -10,8 +10,10 @@ export default defineNuxtConfig({
     compatibilityDate: '2024-04-03',
     devtools: {enabled: true},
     modules: [
-        '@nuxtjs/tailwindcss',
-        '@primevue/nuxt-module'
+      '@nuxtjs/tailwindcss',
+      '@primevue/nuxt-module',
+      '@pinia/nuxt',
+      '@nuxt/image',
     ],
     css: ['primeicons/primeicons.css'],
     primevue: {
@@ -20,5 +22,5 @@ export default defineNuxtConfig({
                 preset: Lara
             }
         }
-    }
+    },
 })

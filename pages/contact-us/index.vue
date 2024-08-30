@@ -105,7 +105,7 @@
 
 <script setup lang='ts'>
 import {validate} from "~/composables/validation";
-import {useApi} from "~/composables/interceptors";
+import {useAPI} from "~/composables/interceptors";
 
 const items = ref([
   {label: 'Home', route: '/'},
@@ -159,7 +159,7 @@ const onSubmit = async () => {
   try {
     loading.value = true;
 
-    await useApi('/emails/contact-us', {
+    await useAPI('/emails/contact-us', {
       method: 'POST',
       body: contactData,
     });

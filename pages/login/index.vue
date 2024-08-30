@@ -9,7 +9,7 @@
       </div>
       <a href='#'
          class='cursor-pointer mt-[20px] sm:mt-[30px] px-[8px] flex gap-2 items-center border-solid w-fit border-[#DADCE0] hover:bg-gray-100 transition-all rounded py-[10px] justify-center border-2'>
-        <i class="pi-google pi"/>
+        <i class="pi-google pi text-gray-500"/>
         <span class='text-[#3C4043] sm:text-[16px] text-[14px]'>
           Sign up with google
         </span>
@@ -57,7 +57,7 @@
 
 <script setup lang='ts'>
 import {validate} from "~/composables/validation";
-import {useAPI} from "~/composables/interceptors";
+import {useUserStore} from "~/stores/useUserStore";
 
 useHead({
   title: 'Gldcart | Login',
@@ -70,6 +70,7 @@ useHead({
 })
 
 const toast = useToast();
+const userStore = useUserStore();
 
 const loading = ref<boolean>(false);
 const isRemember = ref<boolean>(false)
@@ -94,10 +95,7 @@ const onSubmit = async () => {
   try {
     loading.value = true;
 
-    await useAPI('/auth/login', {
-      method: 'POST',
-      body: authData
-    })
+    userStore.login(authData);
   } catch (e) {
     console.log(e)
   } finally {

@@ -7,7 +7,7 @@
         <p class='text-[#49535B]'>Don’t have an account?</p>
         <router-link to="/registration" class='text-[#0989FF] hover:underline'>Create a free account</router-link>
       </div>
-      <a href='#'
+      <a :href='userStore.googleAuth()'
          class='cursor-pointer mt-[20px] sm:mt-[30px] px-[8px] flex gap-2 items-center border-solid w-fit border-[#DADCE0] hover:bg-gray-100 transition-all rounded py-[10px] justify-center border-2'>
         <i class="pi-google pi text-gray-500"/>
         <span class='text-[#3C4043] sm:text-[16px] text-[14px]'>

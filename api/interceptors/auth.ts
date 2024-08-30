@@ -1,20 +1,15 @@
 import type {FetchOptions} from 'ofetch'
 import {useUserStore} from "~/stores/useUserStore";
+import {useHeaders} from "~/composables/useHeaders";
 
 export async function authorization(options: FetchOptions) {
     const accessToken = useCookie('access_token')
-    const runtimeConfig = useRuntimeConfig()
+
     const {setHeaders} = useHeaders()
 
-    setHeaders(options, [
+    setHeaders((options), [
         {'Accept': 'application/json'},
     ])
-
-    if (!runtimeConfig.public?.OLD_API) {
-        setHeaders(options, [
-            {'X-BrandId': runtimeConfig.public.BRAND_ID as string},
-        ])
-    }
 
     if (accessToken.value) {
         setHeaders(options, [
@@ -24,7 +19,7 @@ export async function authorization(options: FetchOptions) {
 }
 
 export async function refreshAuthorization(response: Response) {
-    const refreshToken = useCookie('refresh_token')
+    const refreshToken = useCookie('refreshToken')
 
     if (response.status === 401) {
         if (refreshToken.value)
@@ -34,5 +29,6 @@ export async function refreshAuthorization(response: Response) {
 
 export const authRouteNames = [
     'login',
-    'reset-password-token',
+    'reset-password',
+    'register',
 ]

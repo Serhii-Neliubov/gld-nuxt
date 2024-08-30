@@ -56,7 +56,7 @@
 </template>
 
 <script setup lang='ts'>
-import {validate} from "~/composables/validation";
+import {validate} from "~/composables/useValidation";
 import {useUserStore} from "~/stores/useUserStore";
 
 useHead({

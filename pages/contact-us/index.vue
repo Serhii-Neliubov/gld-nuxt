@@ -104,8 +104,8 @@
 </template>
 
 <script setup lang='ts'>
-import {validate} from "~/composables/validation";
-import {useAPI} from "~/composables/interceptors";
+import {validate} from "~/composables/useValidation";
+import {useAPI} from "~/composables/useAPI";
 
 const items = ref([
   {label: 'Home', route: '/'},

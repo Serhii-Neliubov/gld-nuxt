@@ -2,10 +2,6 @@ import {useUserStore} from "~/stores/useUserStore";
 import {authRouteNames} from "~/api/interceptors/auth";
 
 export default defineNuxtRouteMiddleware((to) => {
-    if (to.meta.layout === 'guest') {
-        return;
-    }
-
     const userStore = useUserStore()
     const accessToken = useCookie('accessToken')
     const refreshToken = useCookie('refreshToken')
@@ -13,10 +9,7 @@ export default defineNuxtRouteMiddleware((to) => {
     if (!userStore.user && accessToken.value && !authRouteNames.includes(to.name as string)) {
         userStore.getUser()
     }
-
     if (!userStore.user && !accessToken.value) {
-        const userStore = useUserStore()
-
         userStore.getUser()
     }
 

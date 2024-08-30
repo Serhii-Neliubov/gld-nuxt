@@ -1,4 +1,5 @@
 import type {FetchContext} from 'ofetch'
+import {authorization} from "~/api/interceptors/auth";
 
 export default defineNuxtPlugin(() => {
     const runtimeConfig = useRuntimeConfig()
@@ -6,9 +7,8 @@ export default defineNuxtPlugin(() => {
     const api = $fetch.create({
         baseURL: runtimeConfig.public.API_URL as string,
 
-        async onRequest({request, options}: FetchContext) {
-            // await authorization(options)
-            // await signedRequest(request, options)
+        async onRequest({options}: FetchContext) {
+            await authorization(options)
         },
         async onResponseError({response}: { response: Response }) {
             // await refreshAuthorization(response)

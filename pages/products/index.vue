@@ -4,10 +4,10 @@
       Select <span class="text-[#02A0A0]">PRODUCTS</span> Sub Category
     </h1>
 
-    <div class="p-5 rounded-md shadow-2xl bg-white border-gray-200 border-[1px]" :aria-hidden="true">
+    <div class="p-5 rounded-md shadow-2xl bg-white border-gray-200 border-[1px]">
       <span class="uppercase font-semibold">Choose a category</span>
-      <div class="lg:w-1/3 w-full mt-4">
-        <TieredMenu :model="items" class="w-full hidden lg:block &[aria-hidden=“false”]">
+      <div class="lg:w-1/3 w-full mt-4" :aria-hidden="true">
+        <TieredMenu :model="items" class="w-full hidden lg:block">
           <template #item="{ item, props, hasSubmenu }">
             <a v-ripple class="flex items-center" v-bind="props.action"
                @click="handleClick(item)">
@@ -18,7 +18,7 @@
           </template>
         </TieredMenu>
         <PanelMenu :model="items" class="w-full lg:!hidden">
-          <template #item="{ item }">
+          <template #item="{ item }" :aria-hidden="true">
             <a v-ripple class="flex items-center px-4 py-2 cursor-pointer group"
                @click="handleClick(item)">
               <span :class="[item.icon, 'text-primary group-hover:text-inherit']"/>

@@ -6,9 +6,9 @@
 
     <div class="p-5 rounded-md shadow-2xl bg-white border-gray-200 border-[1px]">
       <span class="uppercase font-semibold">Choose a category</span>
-      <div class="lg:w-1/3 w-full mt-4" :aria-hidden="true">
+      <div class="lg:w-1/3 w-full mt-4">
         <TieredMenu :model="items" class="w-full hidden lg:block">
-          <template #item="{ item, props, hasSubmenu }">
+          <template #item="{ item, props, hasSubmenu }" :aria-hidden="true">
             <a v-ripple class="flex items-center" v-bind="props.action"
                @click="handleClick(item)">
               <span :class="item.icon"/>

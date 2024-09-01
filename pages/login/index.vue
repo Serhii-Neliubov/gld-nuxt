@@ -26,9 +26,10 @@
             v-model='authData.email'
             :invalid='errors.includes("email")'
         />
-        <InputText
+        <Password
             placeholder='********'
             v-model='authData.password'
+            class="[&>input]:w-full"
             :invalid='errors.includes("password")'
         />
       </div>

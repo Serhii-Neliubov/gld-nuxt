@@ -21,6 +21,7 @@
         </div>
       </div>
       <div class='mt-[40px] flex flex-col gap-[10px] w-full'>
+        {{ userStore.user }}
         <InputText
             placeholder='Gldcart@gmail.com'
             v-model='authData.email'

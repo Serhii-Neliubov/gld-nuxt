@@ -1,10 +1,9 @@
 <template>
   <div class="py-[50px] mx-auto max-w-[1255px] px-[20px]">
     <h1 class="text-center mb-[45px] text-[36px]">
-      Select <span class="text-[#02A0A0]">PRODUCTS</span> Category
+      Select <span class="text-[#02A0A0]">PROFESSIONAL SERVICES</span> Category
     </h1>
-
-    <div class="p-5 rounded-md shadow-2xl bg-white border-gray-200 border-[1px]">
+    <div class="p-5 rounded-md shadow-2xl lg:min-h-[675px] bg-white border-gray-200 border-[1px]">
       <span class="uppercase font-semibold">Choose a category</span>
       <div class="lg:w-1/3 w-full mt-4">
         <TieredMenu :model="items" class="w-full">
@@ -41,10 +40,11 @@
 </template>
 
 <script setup lang='ts'>
+console.log(user.value);
 const items = ref([
   {
-    label: 'Beauty of Skin',
-    icon: 'pi pi-file',
+    label: 'Vehicles',
+    icon: 'pi pi-truck',
     items: [
       {
         label: 'Radiant Complexion',
@@ -164,8 +164,8 @@ const items = ref([
     ]
   },
   {
-    label: 'Bags',
-    icon: 'pi pi-cloud',
+    label: 'Houses',
+    icon: 'pi pi-home',
     items: [
       {
         label: 'Tote Bags',
@@ -370,8 +370,8 @@ const items = ref([
     ]
   },
   {
-    label: 'Awesome Lip Care',
-    icon: 'pi pi-desktop',
+    label: 'Electronics',
+    icon: 'pi pi-mobile',
     items: [
       {
         label: 'Phone',
@@ -387,222 +387,6 @@ const items = ref([
       }
     ]
   },
-  {
-    label: 'Mobile Tablets',
-    icon: 'pi pi-desktop',
-    items: [
-      {
-        label: 'Phone',
-        icon: 'pi pi-mobile'
-      },
-      {
-        label: 'Desktop',
-        icon: 'pi pi-desktop'
-      },
-      {
-        label: 'Tablet',
-        icon: 'pi pi-tablet'
-      }
-    ]
-  },
-  {
-    label: 'Necklaces',
-    icon: 'pi pi-desktop',
-    items: [
-      {
-        label: 'Phone',
-        icon: 'pi pi-mobile'
-      },
-      {
-        label: 'Desktop',
-        icon: 'pi pi-desktop'
-      },
-      {
-        label: 'Tablet',
-        icon: 'pi pi-tablet'
-      }
-    ]
-  },
-  {
-    label: 'Clothing',
-    icon: 'pi pi-desktop',
-    items: [
-      {
-        label: 'Phone',
-        icon: 'pi pi-mobile'
-      },
-      {
-        label: 'Desktop',
-        icon: 'pi pi-desktop'
-      },
-      {
-        label: 'Tablet',
-        icon: 'pi pi-tablet'
-      }
-    ]
-  },
-  {
-    label: 'Bluetooth',
-    icon: 'pi pi-desktop',
-    items: [
-      {
-        label: 'Phone',
-        icon: 'pi pi-mobile'
-      },
-      {
-        label: 'Desktop',
-        icon: 'pi pi-desktop'
-      },
-      {
-        label: 'Tablet',
-        icon: 'pi pi-tablet'
-      }
-    ]
-  },
-  {
-    label: 'Facial Care',
-    icon: 'pi pi-desktop',
-    items: [
-      {
-        label: 'Phone',
-        icon: 'pi pi-mobile'
-      },
-      {
-        label: 'Desktop',
-        icon: 'pi pi-desktop'
-      },
-      {
-        label: 'Tablet',
-        icon: 'pi pi-tablet'
-      }
-    ]
-  },
-  {
-    label: 'Shoes',
-    icon: 'pi pi-desktop',
-    items: [
-      {
-        label: 'Phone',
-        icon: 'pi pi-mobile'
-      },
-      {
-        label: 'Desktop',
-        icon: 'pi pi-desktop'
-      },
-      {
-        label: 'Tablet',
-        icon: 'pi pi-tablet'
-      }
-    ]
-  },
-  {
-    label: 'CPU',
-    icon: 'pi pi-desktop',
-    items: [
-      {
-        label: 'Phone',
-        icon: 'pi pi-mobile'
-      },
-      {
-        label: 'Desktop',
-        icon: 'pi pi-desktop'
-      },
-      {
-        label: 'Tablet',
-        icon: 'pi pi-tablet'
-      }
-    ]
-  },
-  {
-    label: 'Discover Skincare',
-    icon: 'pi pi-desktop',
-    items: [
-      {
-        label: 'Phone',
-        icon: 'pi pi-mobile'
-      },
-      {
-        label: 'Desktop',
-        icon: 'pi pi-desktop'
-      },
-      {
-        label: 'Tablet',
-        icon: 'pi pi-tablet'
-      }
-    ]
-  },
-  {
-    label: 'Headphones',
-    icon: 'pi pi-desktop',
-    items: [
-      {
-        label: 'Phone',
-        icon: 'pi pi-mobile'
-      },
-      {
-        label: 'Desktop',
-        icon: 'pi pi-desktop'
-      },
-      {
-        label: 'Tablet',
-        icon: 'pi pi-tablet'
-      }
-    ]
-  },
-  {
-    label: 'Bracelets',
-    icon: 'pi pi-desktop',
-    items: [
-      {
-        label: 'Phone',
-        icon: 'pi pi-mobile'
-      },
-      {
-        label: 'Desktop',
-        icon: 'pi pi-desktop'
-      },
-      {
-        label: 'Tablet',
-        icon: 'pi pi-tablet'
-      }
-    ]
-  },
-  {
-    label: 'Smart Watch',
-    icon: 'pi pi-desktop',
-    items: [
-      {
-        label: 'Phone',
-        icon: 'pi pi-mobile'
-      },
-      {
-        label: 'Desktop',
-        icon: 'pi pi-desktop'
-      },
-      {
-        label: 'Tablet',
-        icon: 'pi pi-tablet'
-      }
-    ]
-  },
-  {
-    label: 'Earrings',
-    icon: 'pi pi-desktop',
-    items: [
-      {
-        label: 'Phone',
-        icon: 'pi pi-mobile'
-      },
-      {
-        label: 'Desktop',
-        icon: 'pi pi-desktop'
-      },
-      {
-        label: 'Tablet',
-        icon: 'pi pi-tablet'
-      }
-    ]
-  }
 ]);
 
 const product = reactive({

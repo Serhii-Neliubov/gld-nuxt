@@ -2,17 +2,21 @@ import type {FetchOptions} from 'ofetch'
 import {useHeaders} from "~/composables/useHeaders";
 
 export async function authorization(options: FetchOptions) {
-    const accessToken = useCookie('accessToken')
+    const accessToken = useCookie('refreshToken')
 
     const {setHeaders} = useHeaders()
 
     setHeaders((options), [
-        {'Accept': 'application/json'},
+        {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            credentials: 'include'
+        },
     ])
 
     if (accessToken.value) {
         setHeaders(options, [
-            {'Authorization': `Bearer ${accessToken.value}`},
+            {'set-cookie': `refreshToken=${accessToken.value}`},
         ])
     }
 }

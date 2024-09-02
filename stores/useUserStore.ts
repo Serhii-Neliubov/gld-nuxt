@@ -41,7 +41,16 @@ export const useUserStore = defineStore('user', {
         },
 
         async getUser() {
-            await GetUserRequest();
+            const response = await GetUserRequest();
+
+            if (!response.accessToken || !response.user) {
+                return;
+            }
+
+            const accessToken = useCookie<string>('accessToken');
+            accessToken.value = response.accessToken
+
+            this.user = response.user;
         },
 
         async logout() {

@@ -13,13 +13,6 @@ export default defineNuxtPlugin(() => {
         async onResponseError({response}: { response: Response }) {
             // await refreshAuthorization(response)
         },
-        // async onResponse({
-        //                      request,
-        //                      options,
-        //                      response,
-        //                  }: { request: string, options: FetchOptions, response: Response }) {
-        //     await twoFactorAuthenticationCheck(request, options, response)
-        // },
     })
 
     // Expose to useNuxtApp().$api

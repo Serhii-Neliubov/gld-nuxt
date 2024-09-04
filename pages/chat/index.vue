@@ -24,10 +24,9 @@ import useSocket from '~/composables/useSocket';
 import {useUserStore} from '~/stores/useUserStore';
 
 const userStore = useUserStore();
-const accessToken = useCookie('accessToken');
 const user = computed(() => userStore.user);
 
-const socket = useSocket(accessToken.value as string);
+const socket = useSocket();
 
 const participants = ref([]);
 const chats = ref([]);

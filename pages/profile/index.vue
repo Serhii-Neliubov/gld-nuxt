@@ -108,10 +108,12 @@ async function updateProfileHandler() {
   try {
     loading.value = true;
 
-    await useAPI('/', {
-      method: 'POST',
+    await useAPI(`/profile/${user.value?._id}/personal-details`, {
+      method: 'PUT',
       body: profileData,
     });
+    
+    await userStore.logout();
   } catch (e) {
     console.log(e)
   } finally {

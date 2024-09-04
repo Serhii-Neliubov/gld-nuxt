@@ -2,7 +2,7 @@ import type {FetchOptions} from 'ofetch'
 import {useHeaders} from "~/composables/useHeaders";
 
 export async function authorization(options: FetchOptions) {
-    const accessToken = useCookie('token')
+    const token = localStorage.getItem('token')
 
     const {setHeaders} = useHeaders()
 
@@ -12,9 +12,9 @@ export async function authorization(options: FetchOptions) {
         },
     ])
 
-    if (accessToken.value) {
+    if (token) {
         setHeaders(options, [
-            {'Authorization': `Bearer ${accessToken.value}`},
+            {'Authorization': `Bearer ${token}`},
         ])
     }
 }

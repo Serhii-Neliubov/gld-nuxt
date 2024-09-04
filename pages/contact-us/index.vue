@@ -23,7 +23,7 @@
           class='flex flex-wrap md:flex-nowrap gap-10 justify-between items-center bg-white rounded-md py-[25px] md:py-[50px] px-[30px] md:px-[60px]'>
         <div class='w-full'>
           <form class='max-w-[720px]' @submit.prevent="onSubmit">
-            <h2 class='md:text-[30px] text-[20px] mb-[20px] font-medium'>Sent A Message</h2>
+            <h2 class='md:text-[30px] text-[20px] mb-[20px] font-medium'>Send A Message</h2>
             <div class='flex flex-col gap-3'>
               <InputText
                   placeholder='Name'

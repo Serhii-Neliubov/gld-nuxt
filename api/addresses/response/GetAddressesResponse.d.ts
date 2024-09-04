@@ -1,0 +1,3 @@
+interface GetAddressesResponse {
+    addresses: Address[];
+}

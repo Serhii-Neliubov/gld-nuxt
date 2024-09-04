@@ -1,7 +1,7 @@
 <template>
   <Menu :model="items" class="sm:max-w-[250px] w-full [&>ul]:!p-0">
     <template #item="{ item, props }">
-      <router-link v-slot="{ href, navigate }"
+      <router-link v-if="item.route" v-slot="{ href, navigate }"
                    :to="item.route" custom>
         <a v-ripple :class="route.fullPath === item.route ? '!bg-[#F3F8FF] !text-[#0989FF]' : ''" :href="href"
            v-bind="props.action" @click="navigate">
@@ -9,6 +9,11 @@
           <span class="ml-2">{{ item.label }}</span>
         </a>
       </router-link>
+      <a v-ripple v-else :class="route.fullPath === item.route ? '!bg-[#F3F8FF] !text-[#0989FF]' : ''"
+         v-bind="props.action">
+        <span :class="item.icon"/>
+        <span class="ml-2">{{ item.label }}</span>
+      </a>
     </template>
   </Menu>
 </template>

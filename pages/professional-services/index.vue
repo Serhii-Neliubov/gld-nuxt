@@ -40,7 +40,6 @@
 </template>
 
 <script setup lang='ts'>
-console.log(user.value);
 const items = ref([
   {
     label: 'Vehicles',

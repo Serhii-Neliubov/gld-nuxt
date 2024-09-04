@@ -5,6 +5,7 @@ export async function RegistrationRequest(data: {
     password: string
 }): Promise<AuthResponse> {
     return await useAPI<AuthResponse>('/auth/register', {
+        credentials: 'include',
         method: 'POST',
         body: data
     })

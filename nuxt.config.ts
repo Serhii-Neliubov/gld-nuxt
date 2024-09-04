@@ -10,6 +10,11 @@ export default defineNuxtConfig({
             STRIPE_KEY: process.env.STRIPE_PK || '',
         }
     },
+    nitro: {
+        experimental: {
+            websocket: true
+        },
+    },
     compatibilityDate: '2024-04-03',
     devtools: {enabled: true},
     modules: [

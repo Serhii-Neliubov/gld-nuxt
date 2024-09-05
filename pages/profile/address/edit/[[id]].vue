@@ -3,6 +3,7 @@
     <div class="border-solid items-end border-[1px] flex flex-col gap-3 border-gray-200 p-5 h-full rounded-md w-full">
       <div class="w-full flex justify-between items-center">
         <h3 class="text-[26px] font-medium">Edit Address</h3>
+
         <router-link to="/profile/address" class="!text-[12px] sm:!text-sm font-semibold">
           <Button>
             <i class="pi pi-angle-left"/>

@@ -1,20 +1,24 @@
 <template>
   <ProfileContent title="Change Password">
-    <div class="border-solid border-[1px] flex flex-col gap-3 border-gray-200 p-5 h-full rounded-md w-full items-end">
-      <Password
-          placeholder="New Password"
-          class="[&>input]:w-full w-full"
-          v-model="passwordData.newPassword"
-          :invalid="errors.includes('newPassword')"
-      />
-      <Password
-          placeholder="Confirm Password"
-          class="[&>input]:w-full w-full"
-          v-model="passwordData.confirmPassword"
-          :invalid="errors.includes('confirmPassword')"
-      />
+    <div class="border-solid border-[1px] flex flex-col border-gray-200 p-5 h-full rounded-md w-full">
+      <h3 class="text-[26px] font-medium mb-4">Change Password</h3>
 
-      <Button :disabled="loading" @click="onSubmit" class="disabled:bg-gray-200 mt-4 w-fit">Submit</Button>
+      <div class="flex flex-col gap-3 h-full items-end">
+        <Password
+            placeholder="New Password"
+            class="[&>input]:w-full w-full"
+            v-model="passwordData.newPassword"
+            :invalid="errors.includes('newPassword')"
+        />
+        <Password
+            placeholder="Confirm Password"
+            class="[&>input]:w-full w-full"
+            v-model="passwordData.confirmPassword"
+            :invalid="errors.includes('confirmPassword')"
+        />
+
+        <Button :disabled="loading" @click="onSubmit" class="disabled:bg-gray-200 mt-4 w-fit">Submit</Button>
+      </div>
     </div>
   </ProfileContent>
 </template>

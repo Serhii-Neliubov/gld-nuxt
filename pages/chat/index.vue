@@ -53,7 +53,7 @@ function onReceiveChats(data) {
 
   participants.value = data.flatMap((chat: any) =>
       chat.participants
-          .filter((participant: any) => participant._id !== user.value._id)
+          .filter((participant: any) => participant._id !== user.value?._id as string)
           .map((participant: any) => ({
             id: participant._id,
             label: `${participant.name} ${participant.surname}`,
@@ -94,7 +94,7 @@ function sendMessageHandler() {
   const messagePayload = {
     chat: currentChatId.value,
 
-    sender: user.value._id,
+    sender: user.value?._id as string,
     message: messageText.value,
   };
 

@@ -48,27 +48,27 @@
         <div class="flex max-w-[156px] flex-col gap-[15px]">
           <h3 class="w-full text-white text-[20px] uppercase mb-[10px] font-medium">help & info</h3>
           <nav class="flex flex-col gap-[15px]">
-            <Link to="/track-order" class="text-white hover:text-red-500 leading-normal transition-all">
+            <router-link to="/track-order" class="text-white hover:text-red-500 leading-normal transition-all">
               Track An Order
-            </Link>
-            <Link to="/contact-us" class="text-white hover:text-red-500 leading-normal transition-all">
+            </router-link>
+            <router-link to="/contact-us" class="text-white hover:text-red-500 leading-normal transition-all">
               Contact Us
-            </Link>
-            <Link to="/faqs" class="text-white hover:text-red-500 leading-normal transition-all">
+            </router-link>
+            <router-link to="/faq" class="text-white hover:text-red-500 leading-normal transition-all">
               FAQs
-            </Link>
-            <Link to="/privacy-policy" class="text-white hover:text-red-500 leading-normal transition-all">
+            </router-link>
+            <router-link to="/privacy-policy" class="text-white hover:text-red-500 leading-normal transition-all">
               Privacy Policy
-            </Link>
-            <Link to="/cookie-policy" class="text-white hover:text-red-500 leading-normal transition-all">
+            </router-link>
+            <router-link to="/cookie-policy" class="text-white hover:text-red-500 leading-normal transition-all">
               Cookie Policy
-            </Link>
-            <Link to="/shipping-policy" class="text-white hover:text-red-500 leading-normal transition-all">
+            </router-link>
+            <router-link to="/shipping-policy" class="text-white hover:text-red-500 leading-normal transition-all">
               Shipping Policy
-            </Link>
-            <Link to="/terms-conditions" class="text-white hover:text-red-500 leading-normal transition-all">
+            </router-link>
+            <router-link to="/terms-conditions" class="text-white hover:text-red-500 leading-normal transition-all">
               Terms & Conditions
-            </Link>
+            </router-link>
           </nav>
           <Link to="/help-center" class="text-white hover:text-red-500 leading-normal transition-all">
             Help & Support

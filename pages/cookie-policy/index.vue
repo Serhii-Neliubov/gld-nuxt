@@ -78,3 +78,12 @@
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+useSeoMeta({
+  title: 'Cookie Policy | Gldcart',
+  ogTitle: 'Cookie Policy | Gldcart',
+  description: 'We use cookies to enhance your browsing experience on our website. By continuing to use our website, you consent to the use of cookies. This policy explains how we use cookies and how you can manage them.',
+  ogDescription: 'We use cookies to enhance your browsing experience on our website. By continuing to use our website, you consent to the use of cookies. This policy explains how we use cookies and how you can manage them.',
+})
+</script>

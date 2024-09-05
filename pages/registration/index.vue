@@ -108,6 +108,13 @@
 import {useUserStore} from "~/stores/useUserStore";
 import {validate} from "~/composables/useValidation";
 
+useSeoMeta({
+  title: 'Registration | Gldcart',
+  ogTitle: 'Registration | Gldcart',
+  description: 'Registration to Gldcart',
+  ogDescription: 'Registration to Gldcart',
+})
+
 useHead({
   title: 'Gldcart | Registration',
   meta: [

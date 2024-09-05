@@ -79,3 +79,12 @@
     </div>
   </div>
 </template>
+
+<script>
+useSeoMeta({
+  title: 'Terms & Conditions | Gldcart',
+  ogTitle: 'Terms & Conditions | Gldcart',
+  description: 'By using Gldcart.com, you agree to the terms and conditions, privacy policy, and returns/refund policy of the Site. Please read the Terms and Conditions carefully before using Gldcart.com.',
+  ogDescription: 'By using Gldcart.com, you agree to the terms and conditions, privacy policy, and returns/refund policy of the Site. Please read the Terms and Conditions carefully before using Gldcart.com.',
+})
+</script>

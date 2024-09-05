@@ -97,3 +97,12 @@
     </Accordion>
   </div>
 </template>
+
+<script setup lang="ts">
+useSeoMeta({
+  title: 'FAQs | Gldcart',
+  ogTitle: 'FAQs | Gldcart',
+  description: 'Frequently asked questions about Gldcart products, orders, and services',
+  ogDescription: 'Frequently asked questions about Gldcart products, orders, and services',
+})
+</script>

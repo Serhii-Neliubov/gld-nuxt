@@ -130,3 +130,12 @@
     </div>
   </div>
 </template>
+
+<script>
+useSeoMeta({
+  title: 'Shipping Policy | Gldcart',
+  ogTitle: 'Shipping Policy | Gldcart',
+  description: 'This Shipping Policy outlines important information regarding the shipping of products purchased on our website (the "Website"). By placing an order, you agree to the terms and conditions set forth in this policy.',
+  ogDescription: 'This Shipping Policy outlines important information regarding the shipping of products purchased on our website (the "Website"). By placing an order, you agree to the terms and conditions set forth in this policy.',
+})
+</script>

@@ -23,6 +23,13 @@
 import useSocket from '~/composables/useSocket';
 import {useUserStore} from '~/stores/useUserStore';
 
+useSeoMeta({
+  title: 'Chat | Gldcart',
+  ogTitle: 'Chat | Gldcart',
+  description: 'Chat with other users',
+  ogDescription: 'Chat with other users',
+})
+
 const userStore = useUserStore();
 const user = computed(() => userStore.user);
 

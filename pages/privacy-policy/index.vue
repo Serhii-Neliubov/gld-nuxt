@@ -105,3 +105,12 @@
     </Fieldset>
   </div>
 </template>
+
+<script setup lang="ts">
+useSeoMeta({
+  title: 'Privacy Policy | Gldcart',
+  ogTitle: 'Privacy Policy | Gldcart',
+  description: 'Welcome to Gldcart, we prioritize your privacy. This Privacy Policy outlines how we collect, use and protect your personal information when you use our Website.',
+  ogDescription: 'Welcome to Gldcart, we prioritize your privacy. This Privacy Policy outlines how we collect, use and protect your personal information when you use our Website.',
+})
+</script>

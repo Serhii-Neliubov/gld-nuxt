@@ -36,6 +36,13 @@
 import {validate} from "~/composables/useValidation";
 import {useAPI} from "~/composables/useAPI";
 
+useSeoMeta({
+  title: 'Profile | Gldcart',
+  ogTitle: 'Profile | Gldcart',
+  description: 'Gldcart profile',
+  ogDescription: 'Gldcart profile',
+})
+
 const userStore = useUserStore();
 const toast = useToast();
 

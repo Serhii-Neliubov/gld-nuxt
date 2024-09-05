@@ -60,6 +60,13 @@
 import {validate} from "~/composables/useValidation";
 import {useUserStore} from "~/stores/useUserStore";
 
+useSeoMeta({
+  title: 'Login | Gldcart',
+  ogTitle: 'Login | Gldcart',
+  description: 'Login to Gldcart',
+  ogDescription: 'Login to Gldcart',
+})
+
 useHead({
   title: 'Gldcart | Login',
   meta: [

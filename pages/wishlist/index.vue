@@ -11,3 +11,12 @@
     </div>
   </div>
 </template>
+
+<script>
+useSeoMeta({
+  title: 'Wishlist | Gldcart',
+  ogTitle: 'Wishlist | Gldcart',
+  description: 'Browse our selection of products and add your favorites to your wishlist for easy access and future purchases.',
+  ogDescription: 'Browse our selection of products and add your favorites to your wishlist for easy access and future purchases.',
+})
+</script>

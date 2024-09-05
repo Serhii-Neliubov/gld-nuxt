@@ -107,6 +107,13 @@
 import {validate} from "~/composables/useValidation";
 import {useAPI} from "~/composables/useAPI";
 
+useSeoMeta({
+  title: 'Contact Us | Gldcart',
+  ogTitle: 'Contact Us | Gldcart',
+  description: 'Contact us easily, our team is ready to help you',
+  ogDescription: 'Contact us easily, our team is ready to help you',
+})
+
 const items = ref([
   {label: 'Home', route: '/'},
   {label: 'Contact us', route: '/contact-us'},

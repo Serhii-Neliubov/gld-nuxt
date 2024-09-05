@@ -164,6 +164,13 @@
 <script setup lang='ts'>
 import {useRenting as items} from "~/composables/useRenting";
 
+useSeoMeta({
+  title: 'Renting | Gldcart',
+  ogTitle: 'Renting | Gldcart',
+  description: 'Renting the products - that you need for a short period of time - is a great way to save money and reduce waste',
+  ogDescription: 'Renting the products - that you need for a short period of time - is a great way to save money and reduce waste',
+})
+
 const product = reactive({
   category: '',
   subcategory: '',

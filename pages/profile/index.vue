@@ -34,7 +34,7 @@
 
 <script setup lang="ts">
 import {validate} from "~/composables/useValidation";
-import {useAPI} from "~/composables/useAPI";
+import {UpdateProfileRequest} from "~/api/user/profile/requests/UpdateProfileRequest";
 
 useSeoMeta({
   title: 'Profile | Gldcart',
@@ -48,12 +48,10 @@ const toast = useToast();
 
 const user = computed(() => userStore.user);
 
-const selectedLabel = ref<string>('profile');
 const loading = ref<boolean>(false);
 const errors = ref<string[]>([]);
 const profileData = reactive({
   name: '',
-  email: user.value?.email,
   phoneNumber: '',
   address: '',
   bio: '',
@@ -74,10 +72,9 @@ async function updateProfileHandler() {
   try {
     loading.value = true;
 
-    await useAPI(`/profile/${user.value?._id}/personal-details`, {
-      method: 'PUT',
-      body: profileData,
-    });
+    await UpdateProfileRequest(user.value?._id as string, {...profileData, email: user.value?.email as string});
+    await userStore.logout();
+
   } catch (e) {
     console.log(e)
   } finally {
@@ -86,7 +83,4 @@ async function updateProfileHandler() {
   }
 }
 
-function selectLabelHandler(prefix: string) {
-  selectedLabel.value = prefix;
-}
 </script>

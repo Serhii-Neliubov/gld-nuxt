@@ -63,6 +63,7 @@ const onSubmit = async () => {
     loading.value = true;
 
     await ChangePasswordRequest(user.value?._id as string, passwordData.newPassword);
+    await userStore.logout();
 
     toast.add({
       severity: 'success',

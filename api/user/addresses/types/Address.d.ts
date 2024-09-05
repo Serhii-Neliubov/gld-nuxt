@@ -4,5 +4,5 @@ interface Address {
     state: string,
     country: string,
     postal_code: string,
-    _id: string
+    _id?: string
 }

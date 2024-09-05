@@ -2,7 +2,7 @@
   <ProfileContent>
     <div class="border-solid items-end border-[1px] flex flex-col gap-3 border-gray-200 p-5 h-full rounded-md w-full">
       <div class="w-full flex justify-between items-center">
-        <h3 class="text-[26px] font-medium">Add Address</h3>
+        <h3 class="text-[26px] font-medium">Edit Address</h3>
         <router-link to="/profile/address" class="!text-[12px] sm:!text-sm font-semibold">
           <Button>
             <i class="pi pi-angle-left"/>
@@ -49,10 +49,11 @@
 <script setup lang="ts">
 import {validate} from "~/composables/useValidation";
 import {useUserStore} from "~/stores/useUserStore";
-import {AddAddressRequest} from "~/api/user/addresses/request/AddAddressRequest";
+import {ChangeAddressRequest} from "~/api/user/addresses/request/ChangeAddressRequest";
 
 const toast = useToast();
 const userStore = useUserStore();
+const route = useRoute()
 
 const user = computed(() => userStore.user);
 
@@ -73,7 +74,7 @@ const onSubmit = async () => {
     return toast.add({
       severity: 'error',
       summary: 'Error Message',
-      detail: 'If you want to add address you need to fill all fields correctly!',
+      detail: 'If you want to change address you need to fill all fields correctly!',
       life: 3000
     });
   }
@@ -81,18 +82,25 @@ const onSubmit = async () => {
   try {
     loading.value = true;
 
-    await AddAddressRequest(user.value?._id as string, addressData);
+    await ChangeAddressRequest(user.value?._id as string, route.params.id as string, addressData);
 
     toast.add({
       severity: 'success',
       summary: 'Success Message',
-      detail: 'Address added successfully!',
+      detail: 'Address changed successfully!',
       life: 3000
     });
 
     navigateTo('/profile/address');
   } catch (e) {
     console.log(e)
+
+    toast.add({
+      severity: 'error',
+      summary: 'Error Message',
+      detail: 'An error occurred while changing address!',
+      life: 3000
+    });
   } finally {
     errors.value = [];
     loading.value = false;

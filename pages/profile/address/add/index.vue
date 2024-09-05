@@ -87,9 +87,9 @@ const onSubmit = async () => {
     });
 
     toast.add({
-      severity: 'error',
-      summary: 'Error Message',
-      detail: 'If you want to add address you need to fill all fields correctly!',
+      severity: 'success',
+      summary: 'Success Message',
+      detail: 'Address added successfully!',
       life: 3000
     });
 

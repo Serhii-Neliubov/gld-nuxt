@@ -1,11 +1,11 @@
 <template>
-  <div class="max-w-[1240px] pb-[50px] sm:pb-[130px] px-[20px] justify-center items-center mx-auto">
+  <div class="max-w-[1255px] pb-[50px] sm:pb-[130px] px-[20px] justify-center items-center mx-auto">
     <h1 class='text-[36px] mt-[25px] flex-wrap justify-center mb-[50px] leading-0 font-medium flex gap-x-2'>
       Select
       <span class='uppercase text-[#02A0A0] text-center'>products</span>
       Category
     </h1>
-    <div class='flex flex-wrap justify-center xl:justify-start w-full gap-[10px]'>
+    <div class='flex flex-wrap justify-center w-full gap-[10px]'>
       <router-link v-for="category in categories" :to='category.link' :key='category.link'
                    class='md:max-w-[306px] cursor-pointer hover:bg-gray-200 transition-all justify-between w-full p-[25px] bg-[#F3F3F3] flex flex-col items-center'>
         <div class='max-h-[170px]'>

@@ -1,8 +1,11 @@
-export default defineNuxtRouteMiddleware((to, from) => {
-    const userStore = useUserStore();
-    const user = computed(() => userStore.user);
+import {useUserStore} from "~/stores/useUserStore";
 
-    if (!user.value) {
-        return navigateTo('/login');
+export default defineNuxtRouteMiddleware(() => {
+    const userStore = useUserStore();
+
+    if (userStore.user) {
+        return;
     }
+
+    return navigateTo('/login');
 });

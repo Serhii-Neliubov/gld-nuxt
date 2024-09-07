@@ -19,14 +19,14 @@
       </template>
       <template #end>
         <div class="flex items-center gap-4">
-          <router-link to="/shopping-cart">
+          <router-link :to="user ? '/shopping-cart' : '/login'">
             <i class="pi-shopping-cart pi text-[20px]"/>
           </router-link>
-          <router-link to="/wishlist">
+          <router-link :to="user ? '/wishlist' : '/login'">
             <i class="pi-heart pi text-[20px]"/>
           </router-link>
-          <router-link to="/profile">
-            <Avatar image="/" shape="circle"/>
+          <router-link :to="user ? '/profile' : '/login'">
+            <Avatar :image="user?.profile_picture" shape="circle"/>
           </router-link>
         </div>
       </template>
@@ -35,7 +35,12 @@
 </template>
 
 <script setup lang="ts">
+import {useUserStore} from "~/stores/useUserStore";
+
 const router = useRouter();
+const userStore = useUserStore();
+
+const user = computed(() => userStore.user);
 
 const items = ref([
   {
@@ -49,21 +54,21 @@ const items = ref([
     label: 'Renting',
     icon: 'pi pi-car',
     command: () => {
-      router.push('/renting');
+      router.push(user.value?.role === 'buyer' ? '/renting' : '/renting');
     }
   },
   {
     label: 'Products',
     icon: 'pi pi-gift',
     command: () => {
-      router.push('/products');
+      router.push(user.value?.role === 'buyer' ? '/products' : '/products');
     }
   },
   {
     label: 'Professional Services',
     icon: 'pi pi-briefcase',
     command: () => {
-      router.push('/professional-services');
+      router.push(user.value?.role === 'buyer' ? '/professional-services' : '/professional-services');
     }
   },
   {

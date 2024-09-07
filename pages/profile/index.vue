@@ -35,6 +35,7 @@
 <script setup lang="ts">
 import {validate} from "~/composables/useValidation";
 import {UpdateProfileRequest} from "~/api/user/profile/requests/UpdateProfileRequest";
+import {useUserStore} from "~/stores/useUserStore";
 
 useSeoMeta({
   title: 'Profile | Gldcart',

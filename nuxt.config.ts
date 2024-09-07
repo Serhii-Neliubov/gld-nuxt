@@ -8,6 +8,7 @@ export default defineNuxtConfig({
             API_URL: process.env.API_URL || '',
             BASE_URL: process.env.BASE_URL || '',
             STRIPE_KEY: process.env.STRIPE_PK || '',
+            GOOGLE_CLIENT_ID: process.env.GOOGLE_CLIENT_ID || '',
         }
     },
     nitro: {

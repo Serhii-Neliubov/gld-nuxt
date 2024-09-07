@@ -24,15 +24,26 @@ import {useUserStore} from "~/stores/useUserStore";
 const userStore = useUserStore();
 const route = useRoute();
 
-const items = ref([
-  {label: 'Profile', icon: 'pi pi-user', route: '/profile'},
-  {label: 'Address', icon: 'pi pi-map-marker', route: '/profile/address'},
-  {label: 'My Orders', icon: 'pi pi-list', route: '/profile/my-orders'},
-  {label: 'Wishlist', icon: 'pi pi-heart', route: '/wishlist'},
-  {label: 'Change Password', icon: 'pi pi-lock', route: '/profile/change-password'},
-  {label: 'Help And Support', icon: 'pi pi-question-circle', route: '/help-support'},
-  {label: 'Terms & Conditions', icon: 'pi pi-file', route: '/terms-conditions'},
-  {label: 'Contact Us', icon: 'pi pi-user-edit', route: '/contact-us'},
-  {label: 'Logout', icon: 'pi pi-sign-out', command: async () => await userStore.logout()},
-]);
+const user = computed(() => userStore.user);
+
+const items = computed(() => {
+  const baseItems = [
+    {label: 'Profile', icon: 'pi pi-user', route: '/profile'},
+    {label: 'Change Password', icon: 'pi pi-lock', route: '/profile/change-password'},
+    {label: 'Help And Support', icon: 'pi pi-question-circle', route: '/help-support'},
+    {label: 'Terms & Conditions', icon: 'pi pi-file', route: '/terms-conditions'},
+    {label: 'Contact Us', icon: 'pi pi-user-edit', route: '/contact-us'},
+    {label: 'Logout', icon: 'pi pi-sign-out', command: async () => await userStore.logout()},
+  ];
+
+  if (user.value?.role === 'buyer') {
+    baseItems.push(
+        {label: 'Wishlist', icon: 'pi pi-heart', route: '/wishlist'},
+        {label: 'Address', icon: 'pi pi-map-marker', route: '/profile/address'},
+        {label: 'My Orders', icon: 'pi pi-list', route: '/profile/my-orders'}
+    );
+  }
+
+  return baseItems;
+});
 </script>

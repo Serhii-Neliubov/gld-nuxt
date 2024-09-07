@@ -1,10 +1,15 @@
 import {useUserStore} from "~/stores/useUserStore";
 
-export default defineNuxtRouteMiddleware(() => {
-    const userStore = useUserStore()
-    const accessToken = useCookie('refreshToken')
+export default defineNuxtRouteMiddleware(async () => {
+    const userStore = useUserStore();
 
-    if (!userStore.user || !accessToken.value) {
-        userStore.getUser()
+    if (userStore.user) {
+        return;
     }
-})
+
+    try {
+        return await userStore.getUser();
+    } catch (error) {
+        console.error('Error:', error);
+    }
+});

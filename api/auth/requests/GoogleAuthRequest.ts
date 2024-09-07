@@ -1,4 +1,4 @@
-export async function GoogleAuthRequest(userType: string = '') {
+export function GoogleAuthRequest(userType: string = '') {
     const runtimeConfig = useRuntimeConfig();
 
     const rootUrl = "https://accounts.google.com/o/oauth2/v2/auth";

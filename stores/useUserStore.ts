@@ -39,8 +39,8 @@ export const useUserStore = defineStore('user', {
             navigateTo('/')
         },
 
-        async googleAuth(userType?: string): Promise<string> {
-            return await GoogleAuthRequest(userType);
+        googleAuth(userType?: string): string {
+            return GoogleAuthRequest(userType);
         },
 
         async getUser() {

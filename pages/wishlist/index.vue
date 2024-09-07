@@ -19,4 +19,6 @@ useSeoMeta({
   description: 'Browse our selection of products and add your favorites to your wishlist for easy access and future purchases.',
   ogDescription: 'Browse our selection of products and add your favorites to your wishlist for easy access and future purchases.',
 })
+
+definePageMeta({middleware: ['auth']})
 </script>

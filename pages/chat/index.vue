@@ -30,6 +30,8 @@ useSeoMeta({
   ogDescription: 'Chat with other users',
 })
 
+definePageMeta({middleware: ['auth']})
+
 const userStore = useUserStore();
 const user = computed(() => userStore.user);
 

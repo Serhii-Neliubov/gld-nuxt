@@ -61,6 +61,7 @@ export const useUserStore = defineStore('user', {
             localStorage.removeItem('token');
 
             this.user = null
+
             navigateTo('/login');
         },
     },

@@ -4,665 +4,275 @@ export const useRenting = [
         icon: 'pi pi-truck',
         items: [
             {
-                label: 'Sedans',
+                label: "Sedans",
                 items: [
-                    {
-                        label: 'Toyota',
-                    },
-                    {
-                        label: 'Honda',
-                    },
-                    {
-                        label: 'Ford',
-                    },
-                    {
-                        label: 'Nissan',
-                    },
-                    {
-                        label: 'Hyundai',
-                    },
-                    {
-                        label: 'Kia',
-                    },
-                    {
-                        label: 'Subaru',
-                    },
-                    {
-                        label: 'Mazda',
-                    },
-                    {
-                        label: 'BMW',
-                    },
-                    {
-                        label: 'Mercedes',
-                    },
-                    {
-                        label: 'Audi',
-                    },
-                    {
-                        label: 'Lexus',
-                    },
-                    {
-                        label: 'Others',
-                    }
+                    {label: "Toyota Sedan"},
+                    {label: "Honda Sedan"},
+                    {label: "Ford Sedan"},
+                    {label: "Nissan Sedan"},
+                    {label: "Hyundai Sedan"},
+                    {label: "Kia Sedan"},
+                    {label: "Subaru Sedan"},
+                    {label: "Mazda Sedan"},
+                    {label: "BMW Sedan"},
+                    {label: "Mercedes Sedan"},
+                    {label: "Audi Sedan"},
+                    {label: "Lexus Sedan"},
+                    {label: "Other Sedans"}
                 ]
             },
             {
-                label: 'Coupes',
+                label: "Coupes",
                 items: [
-                    {
-                        label: 'Toyota',
-                    },
-                    {
-                        label: 'Honda',
-                    },
-                    {
-                        label: 'Ford',
-                    },
-                    {
-                        label: 'Nissan',
-                    },
-                    {
-                        label: 'Hyundai',
-                    },
-                    {
-                        label: 'Kia',
-                    },
-                    {
-                        label: 'Subaru',
-                    },
-                    {
-                        label: 'Mazda',
-                    },
-                    {
-                        label: 'BMW',
-                    },
-                    {
-                        label: 'Mercedes',
-                    },
-                    {
-                        label: 'Audi',
-                    },
-                    {
-                        label: 'Lexus',
-                    },
-                    {
-                        label: 'Others',
-                    }
+                    {label: "Toyota Coupe"},
+                    {label: "Honda Coupe"},
+                    {label: "Ford Coupe"},
+                    {label: "Nissan Coupe"},
+                    {label: "Hyundai Coupe"},
+                    {label: "Kia Coupe"},
+                    {label: "Subaru Coupe"},
+                    {label: "Mazda Coupe"},
+                    {label: "BMW Coupe"},
+                    {label: "Mercedes Coupe"},
+                    {label: "Audi Coupe"},
+                    {label: "Lexus Coupe"},
+                    {label: "Other Coupes"}
                 ]
             },
             {
-                label: 'Hatchbacks',
+                label: "Hatchbacks",
                 items: [
-                    {
-                        label: 'Toyota',
-                    },
-                    {
-                        label: 'Honda',
-                    },
-                    {
-                        label: 'Ford',
-                    },
-                    {
-                        label: 'Nissan',
-                    },
-                    {
-                        label: 'Hyundai',
-                    },
-                    {
-                        label: 'Kia',
-                    },
-                    {
-                        label: 'Subaru',
-                    },
-                    {
-                        label: 'Mazda',
-                    },
-                    {
-                        label: 'BMW',
-                    },
-                    {
-                        label: 'Mercedes',
-                    },
-                    {
-                        label: 'Audi',
-                    },
-                    {
-                        label: 'Lexus',
-                    },
-                    {
-                        label: 'Others',
-                    }
+                    {label: "Toyota Hatchback"},
+                    {label: "Honda Hatchback"},
+                    {label: "Ford Hatchback"},
+                    {label: "Nissan Hatchback"},
+                    {label: "Hyundai Hatchback"},
+                    {label: "Kia Hatchback"},
+                    {label: "Subaru Hatchback"},
+                    {label: "Mazda Hatchback"},
+                    {label: "BMW Hatchback"},
+                    {label: "Mercedes Hatchback"},
+                    {label: "Audi Hatchback"},
+                    {label: "Lexus Hatchback"},
+                    {label: "Other Hatchbacks"}
                 ]
             },
             {
-                label: 'Minivans',
+                label: "Minivans",
                 items: [
-                    {
-                        label: 'Toyota',
-                    },
-                    {
-                        label: 'Honda',
-                    },
-                    {
-                        label: 'Ford',
-                    },
-                    {
-                        label: 'Nissan',
-                    },
-                    {
-                        label: 'Hyundai',
-                    },
-                    {
-                        label: 'Kia',
-                    },
-                    {
-                        label: 'Subaru',
-                    },
-                    {
-                        label: 'Mazda',
-                    },
-                    {
-                        label: 'BMW',
-                    },
-                    {
-                        label: 'Mercedes',
-                    },
-                    {
-                        label: 'Audi',
-                    },
-                    {
-                        label: 'Lexus',
-                    },
-                    {
-                        label: 'Others',
-                    }
+                    {label: "Toyota Minivan"},
+                    {label: "Honda Minivan"},
+                    {label: "Ford Minivan"},
+                    {label: "Nissan Minivan"},
+                    {label: "Hyundai Minivan"},
+                    {label: "Kia Minivan"},
+                    {label: "Subaru Minivan"},
+                    {label: "Mazda Minivan"},
+                    {label: "BMW Minivan"},
+                    {label: "Mercedes Minivan"},
+                    {label: "Audi Minivan"},
+                    {label: "Lexus Minivan"},
+                    {label: "Other Minivans"}
                 ]
             },
             {
-                label: 'Pickup Trucks',
+                label: "Pickup Trucks",
                 items: [
-                    {
-                        label: 'Toyota',
-                    },
-                    {
-                        label: 'Honda',
-                    },
-                    {
-                        label: 'Ford',
-                    },
-                    {
-                        label: 'Nissan',
-                    },
-                    {
-                        label: 'Hyundai',
-                    },
-                    {
-                        label: 'Kia',
-                    },
-                    {
-                        label: 'Subaru',
-                    },
-                    {
-                        label: 'Mazda',
-                    },
-                    {
-                        label: 'BMW',
-                    },
-                    {
-                        label: 'Mercedes',
-                    },
-                    {
-                        label: 'Audi',
-                    },
-                    {
-                        label: 'Lexus',
-                    },
-                    {
-                        label: 'Others',
-                    }
+                    {label: "Toyota Pickup"},
+                    {label: "Honda Pickup"},
+                    {label: "Ford Pickup"},
+                    {label: "Nissan Pickup"},
+                    {label: "Hyundai Pickup"},
+                    {label: "Kia Pickup"},
+                    {label: "Subaru Pickup"},
+                    {label: "Mazda Pickup"},
+                    {label: "BMW Pickup"},
+                    {label: "Mercedes Pickup"},
+                    {label: "Audi Pickup"},
+                    {label: "Lexus Pickup"},
+                    {label: "Other Pickup Trucks"}
                 ]
             },
             {
-                label: 'Luxury Cars',
+                label: "Luxury Cars",
                 items: [
-                    {
-                        label: 'Toyota',
-                    },
-                    {
-                        label: 'Honda',
-                    },
-                    {
-                        label: 'Ford',
-                    },
-                    {
-                        label: 'Nissan',
-                    },
-                    {
-                        label: 'Hyundai',
-                    },
-                    {
-                        label: 'Kia',
-                    },
-                    {
-                        label: 'Subaru',
-                    },
-                    {
-                        label: 'Mazda',
-                    },
-                    {
-                        label: 'BMW',
-                    },
-                    {
-                        label: 'Mercedes',
-                    },
-                    {
-                        label: 'Audi',
-                    },
-                    {
-                        label: 'Lexus',
-                    },
-                    {
-                        label: 'Others',
-                    }
+                    {label: "Toyota Luxury"},
+                    {label: "Honda Luxury"},
+                    {label: "Ford Luxury"},
+                    {label: "Nissan Luxury"},
+                    {label: "Hyundai Luxury"},
+                    {label: "Kia Luxury"},
+                    {label: "Subaru Luxury"},
+                    {label: "Mazda Luxury"},
+                    {label: "BMW Luxury"},
+                    {label: "Mercedes Luxury"},
+                    {label: "Audi Luxury"},
+                    {label: "Lexus Luxury"},
+                    {label: "Other Luxury Cars"}
                 ]
             },
             {
-                label: 'Electric Cars (EVs)',
+                label: "Electric Cars (EVs)",
                 items: [
-                    {
-                        label: 'Toyota',
-                    },
-                    {
-                        label: 'Honda',
-                    },
-                    {
-                        label: 'Ford',
-                    },
-                    {
-                        label: 'Nissan',
-                    },
-                    {
-                        label: 'Hyundai',
-                    },
-                    {
-                        label: 'Kia',
-                    },
-                    {
-                        label: 'Subaru',
-                    },
-                    {
-                        label: 'Mazda',
-                    },
-                    {
-                        label: 'BMW',
-                    },
-                    {
-                        label: 'Mercedes',
-                    },
-                    {
-                        label: 'Audi',
-                    },
-                    {
-                        label: 'Lexus',
-                    },
-                    {
-                        label: 'Others',
-                    }
+                    {label: "Toyota EV"},
+                    {label: "Honda EV"},
+                    {label: "Ford EV"},
+                    {label: "Nissan EV"},
+                    {label: "Hyundai EV"},
+                    {label: "Kia EV"},
+                    {label: "Subaru EV"},
+                    {label: "Mazda EV"},
+                    {label: "BMW EV"},
+                    {label: "Mercedes EV"},
+                    {label: "Audi EV"},
+                    {label: "Lexus EV"},
+                    {label: "Other EVs"}
                 ]
             },
             {
-                label: 'Hybrid Cars',
+                label: "Hybrid Cars",
                 items: [
-                    {
-                        label: 'Toyota',
-                    },
-                    {
-                        label: 'Honda',
-                    },
-                    {
-                        label: 'Ford',
-                    },
-                    {
-                        label: 'Nissan',
-                    },
-                    {
-                        label: 'Hyundai',
-                    },
-                    {
-                        label: 'Kia',
-                    },
-                    {
-                        label: 'Subaru',
-                    },
-                    {
-                        label: 'Mazda',
-                    },
-                    {
-                        label: 'BMW',
-                    },
-                    {
-                        label: 'Mercedes',
-                    },
-                    {
-                        label: 'Audi',
-                    },
-                    {
-                        label: 'Lexus',
-                    },
-                    {
-                        label: 'Others',
-                    }
+                    {label: "Toyota Hybrid"},
+                    {label: "Honda Hybrid"},
+                    {label: "Ford Hybrid"},
+                    {label: "Nissan Hybrid"},
+                    {label: "Hyundai Hybrid"},
+                    {label: "Kia Hybrid"},
+                    {label: "Subaru Hybrid"},
+                    {label: "Mazda Hybrid"},
+                    {label: "BMW Hybrid"},
+                    {label: "Mercedes Hybrid"},
+                    {label: "Audi Hybrid"},
+                    {label: "Lexus Hybrid"},
+                    {label: "Other Hybrids"}
                 ]
             },
             {
-                label: 'Full-Size Cars',
+                label: "Full-Size Cars",
                 items: [
-                    {
-                        label: 'Toyota',
-                    },
-                    {
-                        label: 'Honda',
-                    },
-                    {
-                        label: 'Ford',
-                    },
-                    {
-                        label: 'Nissan',
-                    },
-                    {
-                        label: 'Hyundai',
-                    },
-                    {
-                        label: 'Kia',
-                    },
-                    {
-                        label: 'Subaru',
-                    },
-                    {
-                        label: 'Mazda',
-                    },
-                    {
-                        label: 'BMW',
-                    },
-                    {
-                        label: 'Mercedes',
-                    },
-                    {
-                        label: 'Audi',
-                    },
-                    {
-                        label: 'Lexus',
-                    },
-                    {
-                        label: 'Others',
-                    }
+                    {label: "Toyota Full-Size"},
+                    {label: "Honda Full-Size"},
+                    {label: "Ford Full-Size"},
+                    {label: "Nissan Full-Size"},
+                    {label: "Hyundai Full-Size"},
+                    {label: "Kia Full-Size"},
+                    {label: "Subaru Full-Size"},
+                    {label: "Mazda Full-Size"},
+                    {label: "BMW Full-Size"},
+                    {label: "Mercedes Full-Size"},
+                    {label: "Audi Full-Size"},
+                    {label: "Lexus Full-Size"},
+                    {label: "Other Full-Size Cars"}
                 ]
             },
             {
-                label: 'Premium Cars',
+                label: "Premium Cars",
                 items: [
-                    {
-                        label: 'Toyota',
-                    },
-                    {
-                        label: 'Honda',
-                    },
-                    {
-                        label: 'Ford',
-                    },
-                    {
-                        label: 'Nissan',
-                    },
-                    {
-                        label: 'Hyundai',
-                    },
-                    {
-                        label: 'Kia',
-                    },
-                    {
-                        label: 'Subaru',
-                    },
-                    {
-                        label: 'Mazda',
-                    },
-                    {
-                        label: 'BMW',
-                    },
-                    {
-                        label: 'Mercedes',
-                    },
-                    {
-                        label: 'Audi',
-                    },
-                    {
-                        label: 'Lexus',
-                    },
-                    {
-                        label: 'Others',
-                    }
+                    {label: "Toyota Premium"},
+                    {label: "Honda Premium"},
+                    {label: "Ford Premium"},
+                    {label: "Nissan Premium"},
+                    {label: "Hyundai Premium"},
+                    {label: "Kia Premium"},
+                    {label: "Subaru Premium"},
+                    {label: "Mazda Premium"},
+                    {label: "BMW Premium"},
+                    {label: "Mercedes Premium"},
+                    {label: "Audi Premium"},
+                    {label: "Lexus Premium"},
+                    {label: "Other Premium Cars"}
                 ]
             },
             {
-                label: 'Economy Cars',
+                label: "Economy Cars",
                 items: [
-                    {
-                        label: 'Toyota',
-                    },
-                    {
-                        label: 'Honda',
-                    },
-                    {
-                        label: 'Ford',
-                    },
-                    {
-                        label: 'Nissan',
-                    },
-                    {
-                        label: 'Hyundai',
-                    },
-                    {
-                        label: 'Kia',
-                    },
-                    {
-                        label: 'Subaru',
-                    },
-                    {
-                        label: 'Mazda',
-                    },
-                    {
-                        label: 'BMW',
-                    },
-                    {
-                        label: 'Mercedes',
-                    },
-                    {
-                        label: 'Audi',
-                    },
-                    {
-                        label: 'Lexus',
-                    },
-                    {
-                        label: 'Others',
-                    }
+                    {label: "Toyota Economy"},
+                    {label: "Honda Economy"},
+                    {label: "Ford Economy"},
+                    {label: "Nissan Economy"},
+                    {label: "Hyundai Economy"},
+                    {label: "Kia Economy"},
+                    {label: "Subaru Economy"},
+                    {label: "Mazda Economy"},
+                    {label: "BMW Economy"},
+                    {label: "Mercedes Economy"},
+                    {label: "Audi Economy"},
+                    {label: "Lexus Economy"},
+                    {label: "Other Economy Cars"}
                 ]
             },
             {
-                label: 'Midsize Cars',
+                label: "Midsize Cars",
                 items: [
-                    {
-                        label: 'Toyota',
-                    },
-                    {
-                        label: 'Honda',
-                    },
-                    {
-                        label: 'Ford',
-                    },
-                    {
-                        label: 'Nissan',
-                    },
-                    {
-                        label: 'Hyundai',
-                    },
-                    {
-                        label: 'Kia',
-                    },
-                    {
-                        label: 'Subaru',
-                    },
-                    {
-                        label: 'Mazda',
-                    },
-                    {
-                        label: 'BMW',
-                    },
-                    {
-                        label: 'Mercedes',
-                    },
-                    {
-                        label: 'Audi',
-                    },
-                    {
-                        label: 'Lexus',
-                    },
-                    {
-                        label: 'Others',
-                    }
+                    {label: "Toyota Midsize"},
+                    {label: "Honda Midsize"},
+                    {label: "Ford Midsize"},
+                    {label: "Nissan Midsize"},
+                    {label: "Hyundai Midsize"},
+                    {label: "Kia Midsize"},
+                    {label: "Subaru Midsize"},
+                    {label: "Mazda Midsize"},
+                    {label: "BMW Midsize"},
+                    {label: "Mercedes Midsize"},
+                    {label: "Audi Midsize"},
+                    {label: "Lexus Midsize"},
+                    {label: "Other Midsize Cars"}
                 ]
             },
             {
-                label: 'Sports Cars',
+                label: "Sports Cars",
                 items: [
-                    {
-                        label: 'Toyota',
-                    },
-                    {
-                        label: 'Honda',
-                    },
-                    {
-                        label: 'Ford',
-                    },
-                    {
-                        label: 'Nissan',
-                    },
-                    {
-                        label: 'Hyundai',
-                    },
-                    {
-                        label: 'Kia',
-                    },
-                    {
-                        label: 'Subaru',
-                    },
-                    {
-                        label: 'Mazda',
-                    },
-                    {
-                        label: 'BMW',
-                    },
-                    {
-                        label: 'Mercedes',
-                    },
-                    {
-                        label: 'Audi',
-                    },
-                    {
-                        label: 'Lexus',
-                    },
-                    {
-                        label: 'Others',
-                    }
+                    {label: "Toyota Sports"},
+                    {label: "Honda Sports"},
+                    {label: "Ford Sports"},
+                    {label: "Nissan Sports"},
+                    {label: "Hyundai Sports"},
+                    {label: "Kia Sports"},
+                    {label: "Subaru Sports"},
+                    {label: "Mazda Sports"},
+                    {label: "BMW Sports"},
+                    {label: "Mercedes Sports"},
+                    {label: "Audi Sports"},
+                    {label: "Lexus Sports"},
+                    {label: "Other Sports Cars"}
                 ]
             },
             {
-                label: 'Vans',
+                label: "Vans",
                 items: [
-                    {
-                        label: 'Toyota',
-                    },
-                    {
-                        label: 'Honda',
-                    },
-                    {
-                        label: 'Ford',
-                    },
-                    {
-                        label: 'Nissan',
-                    },
-                    {
-                        label: 'Hyundai',
-                    },
-                    {
-                        label: 'Kia',
-                    },
-                    {
-                        label: 'Subaru',
-                    },
-                    {
-                        label: 'Mazda',
-                    },
-                    {
-                        label: 'BMW',
-                    },
-                    {
-                        label: 'Mercedes',
-                    },
-                    {
-                        label: 'Audi',
-                    },
-                    {
-                        label: 'Lexus',
-                    },
-                    {
-                        label: 'Others',
-                    }
+                    {label: "Toyota Van"},
+                    {label: "Honda Van"},
+                    {label: "Ford Van"},
+                    {label: "Nissan Van"},
+                    {label: "Hyundai Van"},
+                    {label: "Kia Van"},
+                    {label: "Subaru Van"},
+                    {label: "Mazda Van"},
+                    {label: "BMW Van"},
+                    {label: "Mercedes Van"},
+                    {label: "Audi Van"},
+                    {label: "Lexus Van"},
+                    {label: "Other Vans"}
                 ]
             },
             {
-                label: 'Jeeps',
+                label: "Jeeps",
                 items: [
-                    {
-                        label: 'Toyota',
-                    },
-                    {
-                        label: 'Honda',
-                    },
-                    {
-                        label: 'Ford',
-                    },
-                    {
-                        label: 'Nissan',
-                    },
-                    {
-                        label: 'Hyundai',
-                    },
-                    {
-                        label: 'Kia',
-                    },
-                    {
-                        label: 'Subaru',
-                    },
-                    {
-                        label: 'Mazda',
-                    },
-                    {
-                        label: 'BMW',
-                    },
-                    {
-                        label: 'Mercedes',
-                    },
-                    {
-                        label: 'Audi',
-                    },
-                    {
-                        label: 'Lexus',
-                    },
-                    {
-                        label: 'Others',
-                    }
+                    {label: "Toyota Jeep"},
+                    {label: "Honda Jeep"},
+                    {label: "Ford Jeep"},
+                    {label: "Nissan Jeep"},
+                    {label: "Hyundai Jeep"},
+                    {label: "Kia Jeep"},
+                    {label: "Subaru Jeep"},
+                    {label: "Mazda Jeep"},
+                    {label: "BMW Jeep"},
+                    {label: "Mercedes Jeep"},
+                    {label: "Audi Jeep"},
+                    {label: "Lexus Jeep"},
+                    {label: "Other Jeeps"}
                 ]
-            },
+            }
         ]
     },
     {

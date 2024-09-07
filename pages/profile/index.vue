@@ -43,6 +43,8 @@ useSeoMeta({
   ogDescription: 'Gldcart profile',
 })
 
+definePageMeta({middleware: ['auth']})
+
 const userStore = useUserStore();
 const toast = useToast();
 

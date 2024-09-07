@@ -19,10 +19,10 @@
       </template>
       <template #end>
         <div class="flex items-center gap-4">
-          <router-link :to="user ? '/shopping-cart' : '/login'">
+          <router-link v-if="user?.role === 'Buyer' || !user" :to="user ? '/shopping-cart' : '/login'">
             <i class="pi-shopping-cart pi text-[20px]"/>
           </router-link>
-          <router-link :to="user ? '/wishlist' : '/login'">
+          <router-link v-if="user?.role === 'Buyer' || !user" :to="user ? '/wishlist' : '/login'">
             <i class="pi-heart pi text-[20px]"/>
           </router-link>
           <router-link :to="user ? '/profile' : '/login'">
@@ -54,21 +54,21 @@ const items = ref([
     label: 'Renting',
     icon: 'pi pi-car',
     command: () => {
-      router.push(user.value?.role === 'buyer' ? '/renting' : '/renting');
+      router.push(user.value?.role === 'Buyer' || !user.value ? '/renting' : '/renting/vendor');
     }
   },
   {
     label: 'Products',
     icon: 'pi pi-gift',
     command: () => {
-      router.push(user.value?.role === 'buyer' ? '/products' : '/products');
+      router.push(user.value?.role === 'Buyer' || !user.value ? '/products' : '/products/vendor');
     }
   },
   {
     label: 'Professional Services',
     icon: 'pi pi-briefcase',
     command: () => {
-      router.push(user.value?.role === 'buyer' ? '/professional-services' : '/professional-services');
+      router.push(user.value?.role === 'Buyer' || !user.value ? '/professional-services' : '/professional-services/vendor');
     }
   },
   {

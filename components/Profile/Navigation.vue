@@ -36,8 +36,8 @@ const items = computed(() => {
     {label: 'Logout', icon: 'pi pi-sign-out', command: async () => await userStore.logout()},
   ];
 
-  if (user.value?.role === 'buyer') {
-    baseItems.push(
+  if (user.value?.role === 'Buyer') {
+    baseItems.unshift(
         {label: 'Wishlist', icon: 'pi pi-heart', route: '/wishlist'},
         {label: 'Address', icon: 'pi pi-map-marker', route: '/profile/address'},
         {label: 'My Orders', icon: 'pi pi-list', route: '/profile/my-orders'}
